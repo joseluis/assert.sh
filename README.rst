@@ -4,12 +4,14 @@
 
 **assert.sh** is test-driven development in the Bourne again shell.
 
-:Version: 1.1
-:Author: Robert Lehmann
-:License: LGPLv3
+**NOTICE:** `a new, more actively developed, forked project is available at 'andamira/aserta' <https://github.com/andamira/aserta>`_
 
-.. image:: https://travis-ci.org/lehmannro/assert.sh.svg?branch=master
-   :target: https://travis-ci.org/lehmannro/assert.sh
+- Version: 1.1+extra
+- Author: Robert Lehmann
+- License: LGPLv3
+
+.. image:: https://travis-ci.org/joseluis/assert.sh.svg?branch=master
+   :target: https://travis-ci.org/joseluis/assert.sh
 
 Example
 =======
@@ -63,7 +65,7 @@ The overall status code is 1 (except if you modified the exit code manually)::
 Features
 ========
 
-+ lightweight interface: ``assert`` and ``assert_raises`` *only*
++ lightweight interface
 + minimal setup -- source ``assert.sh`` and you're done
 + test grouping in individual suites
 + time benchmarks with real-time display of test progress
@@ -139,6 +141,19 @@ Reference
   disclaimer applies.)  Use this if you want to run a test only if some
   precondition is met, eg. the test needs root privileges or network access.
 
++ ``assert_success <command> [stdin]``
+
++ ``assert_failure <command> [stdin]``
+
++ ``assert_contains <command> <expected output...>``
+
++ ``assert_startswith <command> <expected output...>``
+
++ ``assert_endswith <command> <expected output...>``
+
++ ``assert_matches <command> <expected output...>``
+
+
 Command line options
 --------------------
 
@@ -170,6 +185,16 @@ variable          corresponding option
 
 Changelog
 =========
+
+1.1+extras
+  * Applied the following pending Pull Requests:
+
+    * `#4 <https://github.com/lehmannro/assert.sh/pull/4>`_, thanks riquito
+    * `#13 <https://github.com/lehmannro/assert.sh/pull/13>`_, thanks dansoton
+    * `#14 <https://github.com/lehmannro/assert.sh/pull/14>`_, thanks sampablokuper
+
+  * Added link to `new fork of the project <https://github.com/andamira/aserta>`_ for all further development.
+  * Fixed Travis-CI build.
 
 1.1
   * Added ``skip`` and ``skip_if`` commands.
